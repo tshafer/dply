@@ -19,7 +19,7 @@ Route::domain('dply.io')->group(function () {
     Route::get('{url}', 'ShortCode@redirect')->where(['url' => '[a-zA-Z0-9]+']);
     Route::get('{url}/stats', 'ShortCode@stats')->where(['url' => '[a-zA-Z0-9]+']);
 });
-Route::domain('cploy.io')->group(function () {
+Route::domain('cply.io')->group(function () {
     Route::get('/', 'ShortCode@index');
     Route::post('/', 'ShortCode@store');
 
