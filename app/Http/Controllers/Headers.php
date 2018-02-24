@@ -27,7 +27,7 @@ class Headers extends BaseController
     public function __construct() {
 
         CrewHttp::init([
-            'applicationId' => '1cb9ad15174c1e797d4e678889426548163d966407bf71770c0de479a2a09d72',
+            'applicationId' => env('CREWHTTP'),
             'utmSource' => 'Code Deploy'
         ]);
 
