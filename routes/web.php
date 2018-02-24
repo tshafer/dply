@@ -11,20 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    Crew\Unsplash\HttpClient::init([
-        'applicationId' => '1cb9ad15174c1e797d4e678889426548163d966407bf71770c0de479a2a09d72',
-        'utmSource' => 'Code Deploy'
-    ]);
 
-    $img = Crew\Unsplash\Photo::random();
-    $image = [
-        'full' => $img->urls['regular'],
-    ];
-    return view('welcome', compact('image'));
+Route::domain('dply.io')->group(function () {
+    Route::get('/', 'ShortCode@index');
+    Route::post('/', 'ShortCode@store');
+
+    Route::get('{url}', 'ShortCode@redirect')->where(['url' => '[a-zA-Z0-9]+']);
+    Route::get('{url}/stats', 'ShortCode@stats')->where(['url' => '[a-zA-Z0-9]+']);
 });
 
-Route::post('generate', function () {
-
-
-});
+    Route::get('/', 'Headers@index');
+    Route::post('/', 'Headers@store');
