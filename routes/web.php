@@ -19,6 +19,7 @@ Route::domain('dply.io')->group(function () {
     Route::get('{url}', 'ShortCode@redirect')->where(['url' => '[a-zA-Z0-9]+']);
     Route::get('{url}/stats', 'ShortCode@stats')->where(['url' => '[a-zA-Z0-9]+']);
 });
-
-    Route::get('/', 'Headers@index');
-    Route::post('/', 'Headers@store');
+// Route::domain('dply.io')->group(function () {
+//     Route::get('/', 'Headers@index');
+//     Route::post('/', 'Headers@store');
+// }
