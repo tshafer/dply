@@ -5,11 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="Url Shortner">
 		<meta name="author" content="Tom Shafer">
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 		<title>Code Deploy Short Code Generater</title>
 		<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 	</head>
 	<body>
-		<div class="main text-white pt-30" style="background: repeating-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('{{ $image }}') center center / cover no-repeat;">
+		<div class="main text-white pt-30 relative" style="background: repeating-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('{{ $image }}') center center / cover no-repeat;">
 			<div class="container mx-auto">
 				<div class="mx-auto">
 					<h1 class="text-center subpixel-antialiased">Code Deploy URL Shortener</h1>
@@ -53,6 +55,8 @@
 					</form>
 				</div>
 			</div>
+			<div class="absolute pin-b text-center w-full pb-4 text-center subpixel-antialiased text-white text-sm">Icons made by <a href="https://www.flaticon.com/authors/swifticons" title="Swifticons" class="text-white no-underline">Swifticons</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="text-white no-underline">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" class="text-white no-underline">CC 3.0 BY</a></div>
 		</div>
+
 	</body>
 </html>
