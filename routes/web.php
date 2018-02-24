@@ -19,7 +19,14 @@ Route::domain('dply.io')->group(function () {
     Route::get('{url}', 'ShortCode@redirect')->where(['url' => '[a-zA-Z0-9]+']);
     Route::get('{url}/stats', 'ShortCode@stats')->where(['url' => '[a-zA-Z0-9]+']);
 });
-// Route::domain('dply.io')->group(function () {
+Route::domain('cploy.io')->group(function () {
+    Route::get('/', 'ShortCode@index');
+    Route::post('/', 'ShortCode@store');
+
+    Route::get('{url}', 'ShortCode@redirect')->where(['url' => '[a-zA-Z0-9]+']);
+    Route::get('{url}/stats', 'ShortCode@stats')->where(['url' => '[a-zA-Z0-9]+']);
+});
+// // Route::domain('headers.tech')->group(function () {
 //     Route::get('/', 'Headers@index');
 //     Route::post('/', 'Headers@store');
-// }
+// // });
